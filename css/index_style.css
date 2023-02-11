@@ -1,7 +1,13 @@
+/*  
+font-family: 'Noto Sans JP', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
 @font-face {
 	font-family: 'lost_wild';
 	src: url(../fonts/Lost_in_Wild.ttf) format('truetype');
+
 }
+
 
 :root {
 	--cor1: #D9325E;
@@ -19,6 +25,7 @@ html {
 }
 
 body {
+	
 	background-color: var(--cor2);
 	
 }
@@ -31,11 +38,14 @@ h1 {
 	text-shadow: 0px -30px 3px var(--cor5);
 }
 
+
+
 section {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	margin-top: 35px;
 }
 
 section img {
@@ -48,19 +58,31 @@ main {
 	justify-content: center;
 }
 
-main .roupas-img img {
-	width: 150px;
-	margin: 15px;
-}
-
 .container-roupas {
 	display: flex;
 	flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-content: center;
     margin-top: 45px;
 }
 
+.container-roupas button {
+	width: 190px;
+	height: 50px;
+	margin: 5px;
+	background-color: var(--cor1);
+	color: white;
+	border: 2px dashed white;
+	font-weight: bolder;
+	font-size: 15px;
+	border-radius: 8px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.container-roupas button:hover {
+	transform: scale(1.03);
+	background-color: var(--cor4);
+}
 
 /* MEDIA QUERY */
 
@@ -69,9 +91,32 @@ main .roupas-img img {
 	html {
 	width: 99.3vw;
 	}
+
+	section img {
+		width: 230px;
+		margin: 7px 10px 0px 0px;
+		margin-top: 50px;
+	}
+
+	h1 {
+		font-size: 40px;
+	}
+
+	.container-main {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
 	.container-roupas {
 		width: 600px;
 		justify-content: center;
+	}
+
+	.container-roupas button {
+		width: 300px;
 	}
 
 }
